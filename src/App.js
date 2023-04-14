@@ -8,7 +8,6 @@ function App() {
   const [data, setdata] = useState(null);
 
 const getCategory = () => {
-    const categories = document.querySelector(".categories")
     const cards = document.querySelector(".cards")
     fetch(category)
     .then(res=>res.json())
@@ -31,7 +30,7 @@ useEffect(getCategory,[]);
       <div className="categories">
         <div className="cards">
           {data? data.categories.map(info=>{
-            <div className='card'>
+            <div className='card' key={info.idCategory}>
               <a href="#">
                 <div className="image">
                   <img src={info.strCategoryThumb} alt="" />
@@ -43,7 +42,7 @@ useEffect(getCategory,[]);
             //console.log(info)
           })
             
-          : <p>no data</p>}
+          : <p>Loading...</p>}
         </div>
       </div>
     </div>
