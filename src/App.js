@@ -32,10 +32,10 @@ function App() {
 
   
   useEffect(()=>{
-    return()=>{
-      // toast.success("Welcome", {
-      //   position: "top-left",
-      //   })
+    return ()=> {
+      toast.success("Welcome", {
+        position: "top-left",
+        })
       getCategory()
     }
   }
