@@ -1,74 +1,137 @@
-*{
-  padding: 0; margin: 0; box-sizing: border-box;
+body::-webkit-scrollbar{
+  background-color: rgb(189, 189, 189);
+  width: 5px;
 }
-body{
-  background-color: #00ffab;
-  font-family: 'Poppins', sans-serif;
-  scroll-behavior: smooth;
-}
-::-webkit-scrollbar{
-  width: 3px;
-}
-.head{
-  font-size: 45px;
-  color: white;
-  letter-spacing: 1px;
-  font-weight: 200;
-  font-style: italic;
-  text-align: center;
-  padding: 20px;
-  text-shadow: 0px 5px 4px rgba(0, 0, 0, 0.356);
-  padding-bottom: 0;
-}
-.categories{
-  padding: 20px;
-}
-.cards{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  color: black;
-  font-size: 14px;
-}
-.card a{
-  box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.301);
-  border-radius: 7px;
-  margin: 1rem;
+body::-webkit-scrollbar-thumb{
   background-color: white;
-  max-width: 320px;
-  padding: 10px;
+  border-radius: 7px;
+}
+.top{
+  background-image: url('./assets/images/bg.jpg');
+  width: 100%;
+  height: 370px;
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 300px;
-  max-height: 400px;
-  cursor: pointer;
-  text-decoration: none;
-  color: black;
+  transition: all 4s ease-in-out;
+  padding: 2rem 1rem;
 }
-.card a ::-webkit-scrollbar{
-  background-color: gray;
-  width: 2px;
+.top:hover{
+  background-position: bottom;
 }
-.card a ::-webkit-scrollbar-thumb{
+.top::after{
+  content: '';
+  top: 0;
+  left: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
   background-color: black;
+  z-index: -1;
+  opacity: .5;
 }
-.image img{
-  height: 150px;
-  width: 150px;
-  object-fit: contain;
+.top .search{
+  background-color: white;
+  display: flex;
+  align-items: center;
+  padding: .5rem 1rem;
+  padding-right: 0;
+  border-radius: 25px;
+  margin-top: 1rem;
+  justify-content: space-between;
+  width: 300px;
+  margin-bottom: 5rem;
 }
-.name{
-  font-size: 20px;
-  font-weight: 800;
-  margin-bottom: 1rem;
+.top .search input{
+  border: none;
+  outline: none;
+  width: 100%;
+  color: rgb(53, 52, 52);
+  font-size: 14px;
+  background-color: transparent;
 }
-.desc{
-  overflow-y: hidden;
+.top h2{
+  letter-spacing: 2px;
   text-align: center;
-  margin-bottom: 1rem;
 }
-.card a:hover .desc{
+.top p{
+  color: rgb(240, 240, 240);
+  text-align: center;
+  padding: 1rem 2rem;
+  font-size: 18px;
+}
+.list{
+  padding: 1rem;
+}
+.list .header{
+  text-align: center;
+  font-size: 3.5em;
+  font-weight: bold;
+  font-family: 'Instrument Serif', serif;
+}
+.list h5{
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  box-shadow: 1px 2px 7px 0px rgba(128, 128, 128, 0.288);
+  border-radius: 25px;
+  padding: .5rem 2rem;
+  width: fit-content;
+  font-style: italic;
+  background-color: white;
+}
+.list h5 span{
+  font-weight: bolder;
+}
+.list .categories-container{
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 1rem 3rem;
+}
+.list .categories-container .category-container{
+  width: 300px;
+  background-color: white;
+  height: 400px;
+  padding: 1rem;
+  border-radius: 7px;
+  margin-top: 3rem;
+}
+.list .categories-container .category-container .category-content{
+  position: relative;
+  top: -4rem;
+}
+.list .categories-container .category-container .image{
+  background-color: rgb(255, 201, 100);
+  border-radius: 7px;
+  padding: 1rem;
+  box-shadow: 1px 2px 10px 0px rgba(128, 128, 128, 0.527);
+}
+.list .categories-container .category-container .name{
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+  margin-top: 1.5rem;
+  color: rgb(32, 32, 32);
+}
+.list .categories-container .category-container .desc{
+  font-size: 18px;
+  margin-top: .7rem;
+  text-align: center;
+  height: 183px;
   overflow-y: scroll;
+}
+.list .categories-container .category-container .desc::-webkit-scrollbar{
+  background-color: rgb(189, 189, 189);
+  width: 3px;
+  border-radius: 2px;
+}
+.list .categories-container .category-container .desc::-webkit-scrollbar-thumb{
+  background-color: gray;
+  border-radius: 7px;
 }
