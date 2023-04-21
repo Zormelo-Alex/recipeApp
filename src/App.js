@@ -17,7 +17,7 @@ function App() {
 
   const getCategory = () => {
     toast.success("Welcome", {
-      position: "top-center",
+      position: "bottom-center",
     })
     //getting all food categories
     fetch(categories)
