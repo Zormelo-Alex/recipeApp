@@ -16,13 +16,15 @@ function App() {
 
 
   const getCategory = () => {
-    toast.success("connected")
+    toast.success("Welcome", {
+      position: "top-center",
+    })
     //getting all food categories
     fetch(categories)
       .then((res) => res.json())
       .then((data) => {
         setdata(data);
-        console.log(data.categories);
+        //console.log(data.categories);
       })
       .catch((err) => {
         toast.error(err.message)
@@ -31,12 +33,6 @@ function App() {
   };
   
   useEffect(()=>{
-    // return ()=> {
-    //   toast.success("Welcome", {
-    //     position: "top-left",
-    //     })
-    //   getCategory()
-    // }
     getCategory()
   }
     , []);
