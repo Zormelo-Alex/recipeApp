@@ -3,7 +3,7 @@ import '../stylesheets/loading.css'
 
 const Loading = () => {
   return (
-    <div>
+    <div className='loading-stuff'>
         <div className="loading-card">
             <div className="loading-top">
                 <div className="img skeleton"></div>
