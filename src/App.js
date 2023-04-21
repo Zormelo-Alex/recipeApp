@@ -16,7 +16,6 @@ function App() {
 
 
   const getCategory = () => {
-    const cards = document.querySelector(".cards");
 
     //getting all food categories
     fetch(categories)
@@ -26,8 +25,7 @@ function App() {
         console.log(data.categories);
       })
       .catch((err) => {
-        console.log(err);
-        cards.textContent = err.message;
+        toast.error(err.message)
         setInterval(getCategory, 1000);
       });
   };
