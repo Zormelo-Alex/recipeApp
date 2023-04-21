@@ -16,7 +16,7 @@ function App() {
 
 
   const getCategory = () => {
-
+    toast.success("connected")
     //getting all food categories
     fetch(categories)
       .then((res) => res.json())
