@@ -29,15 +29,15 @@ function App() {
         setInterval(getCategory, 1000);
       });
   };
-
   
   useEffect(()=>{
-    return ()=> {
-      toast.success("Welcome", {
-        position: "top-left",
-        })
-      getCategory()
-    }
+    // return ()=> {
+    //   toast.success("Welcome", {
+    //     position: "top-left",
+    //     })
+    //   getCategory()
+    // }
+    getCategory()
   }
     , []);
 
