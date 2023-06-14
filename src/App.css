@@ -93,13 +93,15 @@ body::-webkit-scrollbar-thumb{
   justify-content: center;
   flex-wrap: wrap;
   padding: 1rem 3rem;
+  padding-bottom: 0;
 }
 .list .categories-container .category-container{
   width: 300px;
   background-color: white;
-  height: 400px;
   padding: 1rem;
   border-radius: 7px;
+  max-height: 400px;
+  height: fit-content;
   margin-top: 3rem;
 }
 .list .categories-container .category-container .category-content{
@@ -123,15 +125,24 @@ body::-webkit-scrollbar-thumb{
   font-size: 18px;
   margin-top: .7rem;
   text-align: center;
-  height: 183px;
+  max-height: 183px;
   overflow-y: scroll;
 }
 .list .categories-container .category-container .desc::-webkit-scrollbar{
-  background-color: rgb(189, 189, 189);
-  width: 3px;
-  border-radius: 2px;
+  width: 0;
 }
-.list .categories-container .category-container .desc::-webkit-scrollbar-thumb{
-  background-color: gray;
-  border-radius: 7px;
+
+
+@media only screen and (max-width: 990px){
+  .top{
+    height: 470px;
+  }
+}
+@media only screen and (max-width: 450px){
+  .top{
+    height: 700px;
+  }
+  .top p{
+    padding: 2.5rem 2rem;
+  }
 }
