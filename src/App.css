@@ -140,14 +140,17 @@ body::-webkit-scrollbar-thumb{
 }
 @media only screen and (max-width: 450px){
   .top{
-    height: 700px;
+    height: 650px;
   }
   .top p{
     padding: 2.5rem 2rem;
   }
 }
-@media only screen and (max-width: 350px){
+@media only screen and (max-width: 400px){
   .top{
     height: 800px;
+  }
+  .top p{
+    padding: 2rem;
   }
 }
