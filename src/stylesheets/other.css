@@ -1,5 +1,5 @@
 .top.meals{
-    height: 270px;
+    height: fit-content;
     transition: all 2s ease-in-out;
     background-position: center;
 }
