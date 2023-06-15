@@ -3,6 +3,7 @@ import Categories from "./components/Categories";
 import { Link, Route, Routes } from "react-router-dom";
 import Meals from "./components/Meals";
 import Meal from "./components/Meal";
+import SearchResults from "./components/SearchResults";
 
 
 function App() {
@@ -11,6 +12,10 @@ function App() {
       <Routes>
         <Route path="/" element={
             <Categories/>
+        }/>
+
+        <Route path="/search/:key" element={
+          <SearchResults/>
         }/>
 
         <Route path="/category/:category" element={

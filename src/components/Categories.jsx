@@ -4,15 +4,18 @@ import { AiOutlineSearch } from "react-icons/ai";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Loading from "./Loading";
+import { useNavigate } from 'react-router-dom';
 
 const Categories = () => {
       //console.log("Dom")
+
+  const navigate = useNavigate()
 
   const [data, setdata] = useState(null);
   const [search, setsearch] = useState("");
 
   const categories = "https://www.themealdb.com/api/json/v1/1/categories.php";
-  const searchAPI = `https://www.themealdb.com/api/json/v1/1/search.php?s=${search}`;
+  
 
 
   const getCategory = () => {
@@ -31,6 +34,10 @@ const Categories = () => {
         setInterval(getCategory, 1000);
       });
   };
+
+ const Search = () => {
+  navigate(`/search/${search}`);
+ }
   
   useEffect(()=>{
     getCategory()
@@ -45,8 +52,12 @@ const Categories = () => {
           <input
             type="search"
             placeholder="Search meal..."
+            onChange={(e)=> {
+              setsearch(e.target.value)
+            }}
           />
           <AiOutlineSearch className="cursor-pointer w-8 pl-2 pr-2 h-full" 
+          onClick={Search}
           />
         </div>
         <div>
