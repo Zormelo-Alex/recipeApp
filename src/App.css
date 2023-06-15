@@ -9,7 +9,7 @@ body::-webkit-scrollbar-thumb{
 .top{
   background-image: url('./assets/images/bg.jpg');
   width: 100%;
-  height: 370px;
+  height: fit-content;
   background-size: cover;
   background-position: top;
   position: relative;
@@ -134,23 +134,12 @@ body::-webkit-scrollbar-thumb{
 }
 
 
-@media only screen and (max-width: 990px){
-  .top{
-    height: 470px;
-  }
-}
 @media only screen and (max-width: 450px){
-  .top{
-    height: 650px;
-  }
   .top p{
     padding: 2.5rem 2rem;
   }
 }
 @media only screen and (max-width: 400px){
-  .top{
-    height: 800px;
-  }
   .top p{
     padding: 2rem;
   }
