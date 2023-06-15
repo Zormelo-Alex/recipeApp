@@ -36,7 +36,7 @@ const Categories = () => {
   };
 
  const Search = () => {
-  console.log(search)
+  //console.log(search)
   navigate(`/search/${search}`);
  }
 
