@@ -36,9 +36,17 @@ const Categories = () => {
   };
 
  const Search = () => {
+  console.log(search)
   navigate(`/search/${search}`);
  }
-  
+
+ window.addEventListener("keypress", (e)=>{
+  //console.log(e.key)
+  if(e.key == "Enter"){
+    Search()
+  }
+})
+
   useEffect(()=>{
     getCategory()
   }
