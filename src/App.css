@@ -127,6 +127,7 @@ body::-webkit-scrollbar-thumb{
   text-align: center;
   max-height: 183px;
   overflow-y: scroll;
+  font-style: italic;
 }
 .list .categories-container .category-container .desc::-webkit-scrollbar{
   width: 0;
